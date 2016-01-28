@@ -1,16 +1,16 @@
 var Year = function (input) {
-  year = input;
+  this.year = input;
 };
 
 Year.prototype.isLeap = function () {
   var leap = false;
-  if (year % 4 === 0) {
+  if (this.year % 4 === 0) {
     leap = true;
-    if (year % 100 === 0 && year % 400 !== 0){
+    if (this.year % 100 === 0 && this.year % 400 !== 0){
       leap = false;
     }
   }
-  return leap
+  return leap;
 };
 
 module.exports = Year;
