@@ -1,11 +1,11 @@
 FoodChain = function () {};
 
-FoodChain.prototype.verses = function (verseNums) {
+FoodChain.prototype.verses = function (verseBeg, verseEnd) {
   var song = '';
-  for (var i = 0; i < arguments.length; i++) {
-    song += this.verse(arguments[i]) + '\n';
+  for (var i = verseBeg; i <= verseEnd; i++) {
+    song += this.verse(i) + '\n';
   }
-  return song.replace(/\n$/, "");
+  return song;
 };
 
 FoodChain.prototype.verse = function (verseNum) {
